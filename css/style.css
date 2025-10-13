@@ -243,28 +243,6 @@ select {
   text-align: center;
 }
 
-/* profil */
-[id="profil"] {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  margin-bottom: 20px;
-}
-
-[id="profil"] h3 {
-  margin: 0;
-}
-
-[id="profil"]:hover {
-  color: orange;
-}
-
-[id="profil"] img {
-  height: 35px;
-  width: auto;
-  margin: 0;
-}
-
 [id="lien-inscription"] {
   text-decoration: underline;
 }
@@ -272,4 +250,11 @@ select {
 [id="lien-inscription"]:hover {
   text-decoration: underline;
   color: orange;
+}
+
+/* myspace */
+
+[id="myspace"] {
+  display: flex;
+  gap: 20px;
 }
