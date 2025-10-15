@@ -4,8 +4,10 @@ session_start();
 
 require_once('classes/crud.php');
 require_once('library/check_session.php');
+
 $page = "User Space";
 include_once('header.php');
+
 // Créer une instance de la classe CRUD
 $crud = new CRUD;
 
@@ -70,6 +72,7 @@ extract($utilisateur);
             <input type="hidden" name="reservationId" value="<?= $reservation['id']; ?>">
             <input type="submit" value="Modifier" class="boutton-submit petit">
           </form>
+
         </div>
 
       </article>

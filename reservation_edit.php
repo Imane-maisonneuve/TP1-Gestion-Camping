@@ -39,12 +39,16 @@ require_once('header.php')
     <label for="nbrDePersonnes">Nombre de personnes</label>
     <input id="nbrDePersonnes" name="nbrDePersonnes" value="<?= $nbrDePersonnes; ?>">
 
-    <label for="Statut">Statut de la reservation</label>
-    <select name="StatutId">
+    <label for="statut">Statut de la reservation</label>
+    <select name="statutId">
         <option value="">Select</option>
         <?php
         foreach ($status as $statut) {
-        ?> <option value=" <?= $statut['id']; ?>">
+        ?>
+            <option value="<?= $statut['id']; ?>"
+                <?php if ($statut['id'] == $statutId) {
+                    echo "selected";
+                } ?>>
                 <?= $statut['statutDescription']; ?>
             </option>
         <?php

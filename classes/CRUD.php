@@ -8,6 +8,12 @@ class CRUD extends PDO
         parent::__construct('mysql:host=localhost; dbname=camping; port=3306; charset=utf8', 'root', 'admin');
     }
 
+    public function __destruct()
+    {
+        // /!\ C'est juste pour la forme, je n'est pas utilisé le destructeur pour ce tp.
+        // echo "Connexion fermée ";
+    }
+
     // Méthode pour sélectionner tous les enregistrements d'une table
     public function select($table, $field = 'id', $order = 'ASC')
     {

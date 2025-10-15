@@ -7,12 +7,11 @@ require_once('classes/crud.php');
 $crud = new CRUD;
 $utilisateur = $crud->selectId('utilisateur', $_POST['courriel'], 'courriel');
 
-extract($utilisateur);
-
-$motDePasse = trim($motDePasse);
-
 // Verifier si l'utilisateur existe et si le mot de passe est bon
 if ($utilisateur) {
+    extract($utilisateur);
+    $motDePasse = trim($motDePasse);
+
     if ($_POST['password'] === $motDePasse) {
         session_regenerate_id();
         $_SESSION['fingerPrint'] = md5($_SERVER["HTTP_USER_AGENT"] . $_SERVER["REMOTE_ADDR"]);
